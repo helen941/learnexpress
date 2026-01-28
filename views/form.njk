@@ -2,13 +2,13 @@
 {% block title %}About{% endblock %}
 {% block content %}
 <h1>Test Form</h1>
-<form>
+<form action="/answers">
     <div class="mb-3">
         <label for="name" class="form-label">Name</label>
-        <input type="text" class="form-control" id="name" placeholder="ära kirjuta siia sa väike lammas"></div>
+        <input name="name" type="text" class="form-control" id="name" placeholder="ära kirjuta siia sa väike lammas"></div>
         <div class="mb-3">
             <label for="bio" class="form-label">Mis sul jälle vaja on</label>
-            <textarea class="form-control" id="bio" rows="5"></textarea>
+            <textarea name="bio" class="form-control" id="bio" rows="5"></textarea>
         </div>
         <div class="mb-3">
             <label for="age" class="form-label">Age</label>
@@ -24,21 +24,21 @@
                             <input type="checkbox" class="form-check-inputr" id="cool"></div>
                             <div class="mb-3">
                                 <p>Choose your quest</p>
-                                <input name="pokemon" type="radio" class="form-check-inputr" id="bulbasaur">
+                                <input name="pokemon" type="radio" class="form-check-inputr" id="bulbasaur" value="bulbasaur">
                                     <label for="bulbasaur" class="form-label">Bulbasaur</label>
-                                    <input name="pokemon" type="radio" class="form-check-inputr" id="squirtle">
+                                    <input name="pokemon" type="radio" class="form-check-inputr" id="squirtle" value="squirtle">
                                         <label for="squirtle" class="form-label">squirtle</label>
-                                        <input name="pokemon" type="radio" class="form-check-inputr" id="pikachu">
+                                        <input name="pokemon" type="radio" class="form-check-inputr" id="pikachu" value="pikachu">
                                             <label for="pikachu" class="form-label">pikachue</label>
                                         </div>
                                     </div>
                                     <div class="mb-3">
                                         <p>Food order</p>
-                                        <input name="Food" type="checkbox" class="form-check-inputr" id="burger">
+                                        <input name="Food" type="checkbox" class="form-check-inputr" id="burger" value="burger">
                                             <label for="burger" class="form-label">Burger</label>
-                                            <input name="Food" type="checkbox" class="form-check-inputr" id="pizza">
+                                            <input name="Food" type="checkbox" class="form-check-inputr" id="pizza" value="pizza">
                                                 <label for="pizza" class="form-label">Pizza</label>
-                                                <input name="Food" type="checkbox" class="form-check-inputr" id="icecream">
+                                                <input name="Food" type="checkbox" class="form-check-inputr" id="icecream" value="icecream">
                                                     <label for="icecream" class="form-label">icecream</label>
                                                 </div>
                                             
