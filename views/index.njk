@@ -1,5 +1,11 @@
 {% extends 'partials/layout.njk' %}
 {% block title %}Home{% endblock %}
 {% block content %}
-    <h1>Hello Vm24!</h1>
+    <h1>{{name}}! You are {{ age }} years old! </h1>
+    <ul>
+        {% for fruits in fruits %}
+        <li>{{ fruits }} </li>
+        {% endfor %}
+
+    </ul>
 {% endblock%}
