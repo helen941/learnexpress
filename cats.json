@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Kurru",
+    "birthyear": 2014,
+    "gender": "Female",
+    "color": "black",
+    "eyes": "green",
+    "spayed": true,
+    "id": 1
+  },
+  {
+    "id": 2,
+    "name": "Potsataja",
+    "birthyear": 2020,
+    "gender": "Female",
+    "color": "orange",
+    "eyes": "blue",
+    "spayed": true
+  },
+  {
+    "id": 3,
+    "name": "Gena",
+    "birthyear": 2020,
+    "gender": "Male",
+    "color": "orange",
+    "eyes": "blue",
+    "spayed": true
+  },
+  {
+    "name": "Miska",
+    "birthyear": 2024,
+    "gender": "Select gender",
+    "color": "white",
+    "eyes": "blue",
+    "spayed": true,
+    "id": 4
+  },
+  {
+    "name": "Nurri",
+    "birthyear": 2008,
+    "gender": "Female",
+    "color": "yellow",
+    "eyes": "blue",
+    "spayed": true,
+    "id": 6
+  },
+  {
+    "name": "Täppi",
+    "birthyear": 1999,
+    "gender": "Male",
+    "color": "white",
+    "eyes": "grey",
+    "spayed": true,
+    "id": 7
+  }
+]

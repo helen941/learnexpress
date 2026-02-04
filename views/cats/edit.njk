@@ -1,0 +1,49 @@
+{% extends 'partials/layout.njk' %}
+{% block title %}About{% endblock %}
+{% block content %}
+    <h1>Edit {{cat.name}}</h1>
+    <form action="/cats/edit?id={{cat.id}}" method="POST">
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input value="{{cat.name}}" name="name" type="text" class="form-control" id="name" placeholder="Write cat name">
+        </div>
+
+        <div class="mb-3">
+            <label for="bio" class="form-label">Birthyear</label>
+        <input value="{{cat.birthyear}}" name="birthyear" type="number" class="form-control" id="name" placeholder="Write cat birth year">
+        </div>
+
+         <div class="mb-3">
+             <label for="gender" class="form-label">Gender</label>
+            <select name="gender" id="gender" class="form-select">
+            <option disable>Select gender</option>
+             {% if cat.gender == 'Female'%}
+            <option selected>Female</option>
+            {% else %}
+            <option>Female</option>
+            {% endif %}
+{% if cat.gender == 'Male'%}
+            <option selected>Male</option>
+            {% else %}
+            <option>Male</option>
+            {% endif %}
+            </select>
+        </div>
+        
+           <div class="mb-3">
+        <label for="color" class="form-label">Cat color</label>
+        <input value="{{cat.color}}" name="color" type="text" class="form-control" id="name" placeholder="Write cat color">
+        </div>
+
+               <div class="mb-3">
+        <label for="eyes" class="form-label">Eyes color</label>
+        <input value="{{cat.eyes}}" name="eyes" type="text" class="form-control" id="name" placeholder="Write cat eyes color">
+        </div>
+
+            <div class="mb-3">
+        <label for="spayed" class="form-label">Spayed</label>
+        <input {% if cat.spayed %}checked{% endif %}} name="spayed" type="checkbox" class="form-check-input" id="spayed">
+        </div>
+        <button class="btn btn-primary">Add cat</button>
+    </form>
+{% endblock %}
