@@ -45,12 +45,12 @@
     "id": 6
   },
   {
-    "name": "Täppi",
-    "birthyear": 1999,
-    "gender": "Male",
-    "color": "white",
-    "eyes": "grey",
-    "spayed": true,
-    "id": 7
+    "name": "Lola666",
+    "birthyear": 2015,
+    "gender": "Select gender",
+    "color": "sky blue",
+    "eyes": "violet",
+    "id": 104,
+    "spayed": false
   }
 ]

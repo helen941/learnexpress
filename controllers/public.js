@@ -3,8 +3,8 @@ import express from 'express';
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  let name = 'Markus';
-  let age = 76;
+  let name = 'Helen';
+  let age = 17;
   let fruits = [
     'Banana',
     'Õun',
