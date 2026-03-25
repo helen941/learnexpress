@@ -34,7 +34,7 @@ router.post("/login", async (req, res) => {
         let user = await prisma.user.findUnique({
         where: { email: req.body.email },
     });
-    if(user && bcrypt.compareSync(req.body.password)){
+    if(user && bcrypt.compareSync(req.body.password, user.password)){
         req.session.userID = user.id;
         res.redirect("/cats");
     } else {
