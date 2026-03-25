@@ -12,11 +12,10 @@ router.post("/register", async (req, res) => {
     });
     if (!user && req.body.password === req.body.password_confirm) {
         await prisma.user.create({
-            where: { id: parseInt(req.query.id) },
             data: {
                 name: req.body.name,
                 email: req.body.email,
-                passwor: req.body.password
+                password: req.body.password
             },
         });
     res.redirect('/login');
@@ -29,7 +28,7 @@ router.get("/login", async (req, res) => {
     res.render("auth/login.njk");
 });
 
-router.post("/register", async (req, res) => {
+router.post("/login", async (req, res) => {
         let user = await prisma.user.findUnique({
         where: { email: req.body.email },
     });
@@ -39,6 +38,11 @@ router.post("/register", async (req, res) => {
     } else {
     res.redirect('/login');
     }
+});
+
+router.get("/logout", async (req, res) => {
+    delete req.session.userID;
+    res.redirect('/');
 });
 
 export default router;

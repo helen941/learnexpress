@@ -8,7 +8,7 @@ router.get("", async (req, res) => {
   let count = await prisma.cat.count();
   let perPage = 10;
   let pages = Math.ceil(count / perPage);
-  let currentPage = parseInt(req.query.page);
+  let currentPage = parseInt(req.query.page ?? 1);
   let skip = perPage * currentPage;
   let cats = await prisma.cat.findMany({
     take: perPage,

@@ -19,6 +19,7 @@ const env = nunjucks.configure('views', {
 });
 
 app.use(async (req, res, next) => {
+  console.log(req.session)
   if(req.session.userID) {
   res.locals.user = await prisma.user.findUnique({
     where: { id: req.session.userID }
